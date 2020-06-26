@@ -7,7 +7,7 @@ const userCtrl = require('../controllers/user')
 const productCtrl = require('../controllers/product')
 
 
-api.get('/product', productCtrl.getProducts)
+api.get('/product', auth, productCtrl.getProducts)
 
 api.get('/product/:productId', productCtrl.getProduct)
 
